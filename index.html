@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header-menu">
+        <div class="container-menu">
+            <h1>Tarefas Diárias</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="a-menu">Início</a></li>
+                    <li><a href="#gerenciar" class="a-menu">Gerenciar Tarefas</a></li>
+                    <li><a href="#contat" class="a-menu">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hidden" id="inicio">
+        <div class="text-menu">
+            <h1>Organize Tarefas <br>de Forma Simples</h1>
+            <a href="#gerenciar"><button class="btn-menu">Organizar</button></a>
+        </div>
+    </section>
+
+    <main>
+        <div class="container-primary">
+            <div class="container-secundary">
+                <div class="container-text">
+                    <h1>Gerencie suas tarefas</h1>
+                    <p>
+                        O site foi criado pensando em você, que busca uma maneira simples e eficaz de organizar cada
+                        compromisso, cada projeto e cada pequena pendência.
+                        Com uma interface intuitiva e funcionalidades pensadas para o seu dia a dia, você pode adicionar
+                        e marcar suas tarefas como concluídas com apenas alguns cliques. Visualize o que realmente
+                        importa, defina prioridades e sinta a satisfação de ver suas metas se transformando em
+                        conquistas,
+                        tendo um dia mais produtivo e uma mente mais tranquila.
+                    </p>
+                </div>
+
+                <div class="container-input" id="gerenciar">
+                    Título <br> <input type="text" placeholder="Digite o título (ex: estudar...)" id="text-tarefa"
+                        class="input-tarefa" required>
+                    <br>
+                    Descrição <br> <textarea name="" id="desc" placeholder="Digite a descrição"
+                        class="input-tarefa"></textarea>
+                    <br>
+                    <button id="btn-add" class="btn-add">Adicionar Tarefa</button>
+                    <div id="alerta" class="alerta-ux">[ERRO] Verifique se os valores foram inseridos corretamente.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section>
+        <div class="container-tarefa list-hidden" id="container-tarefa">
+            <p id="tarefa"> </p>
+            <div class="tarefa-feito">
+                <button class="btn-fim btn-hidden" id="btn-fim">Finalizar</button>
+                <label for="">Todos foram feitos</label>
+                <input type="checkbox" id="check-tarefa">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer" id="contat">
+            <div class="contat-footer">
+                <a href="https://github.com/TheEduDev" target="_blank"><img src="img/imggithub.png" alt="imggit">TheEduDev</a>
+                <a href="https://www.linkedin.com/in/carlos-eduardo-710394375/" target="_blank"><img src="img/imglinkedin.png" alt="imggit">Carlos Eduardo</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

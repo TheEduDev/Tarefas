@@ -1,0 +1,348 @@
+:root {
+    --bluecolor: cadetblue;
+    --redcolor: red;
+    --blackcolor: black;
+    --whitecolor: white;
+    --darklastcolor: darkslategray;
+    --shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    --border: 5px;
+}
+
+html {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;/
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-menu {
+    width: 100%;
+    min-height: 50px;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--whitecolor);
+    color: var(--darklastcolor);
+    box-shadow: var(--shadow);
+}
+
+.header-menu h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serifx;
+    min-width: 280px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header-menu a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--darklastcolor);
+    text-decoration: none;
+}
+
+nav {
+    min-width: 280px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: auto -41px;
+    gap: 30px;
+}
+
+section {
+    display: grid;
+    min-height: 25vh;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 1s;
+}
+
+.vis {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s;
+    transform: translateY(-20px);
+}
+
+.text-menu {
+    min-width: 280px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--darklastcolor);
+}
+
+.text-menu a {
+    color: var(--whitecolor);
+    text-decoration: none;
+}
+
+.btn-menu {
+    border: none;
+    border-radius: var(--border);
+    background-color: var(--bluecolor);
+    color: var(--whitecolor);
+    width: 200px;
+    height: 30px;
+    box-shadow: var(--shadow);
+}
+
+.btn-menu:hover {
+    transform: translateY(-10px);
+    transition: all 0.6s;
+}
+
+main {
+    min-width: 280px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.container-primary {
+    margin-top: 10px;
+    width: 100%;
+    min-height: 250px;
+    margin: auto;
+    background-color: var(--darklastcolor);
+    box-shadow: var(--shadow);
+    padding: 40px 0;
+}
+
+.container-secundary {
+    min-width: 270px;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: var(--border);
+    background-color: var(--whitecolor);
+    box-shadow: var(--shadow);
+    display: flex;
+    top: 40px;
+}
+
+.container-text {
+    width: 50%;
+    min-height: 100px;
+    margin: 0 50px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-text h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--darklastcolor);
+}
+
+.container-input {
+    width: 50%;
+    min-height: 100px;
+    margin: 0;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-tarefa {
+    border: 2px solid var(--bluecolor);
+    border-radius: var(--border);
+    background-color: var(--whitecolor);
+    width: 500px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 5px;
+    box-shadow: var(--shadow);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#desc {
+    height: 100px;
+}
+
+.input-tarefa:focus {
+    outline: none;
+}
+
+.btn-add {
+    border: none;
+    border-radius: var(--border);
+    background-color: var(--bluecolor);
+    color: var(--whitecolor);
+    box-shadow: var(--shadow);
+    width: 500px;
+    height: 30px;
+    margin: 5px auto;
+}
+
+.btn-add:hover {
+    transform: translateY(-5px);
+    transition: all 0.6s;
+}
+
+.alerta-ux {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--redcolor);
+    color: var(--whitecolor);
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    z-index: 9999;
+    display: none;
+    animation: slideDown 0.3s ease;
+}
+
+.container-tarefa {
+    border: 3px solid var(--darklastcolor);
+    border-radius: var(--border);
+    background-color: var(--whitecolor);
+    min-height: 50px;
+    min-width: 280px;
+    width: 1200px;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    margin: auto;
+    box-shadow: var(--shadow);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+.list-hidden{
+    opacity: 0;
+}
+
+.tarefa-feito {
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    gap: 5px;
+    align-items: center;
+}
+
+.tarefa-feito input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.tarefa-feito input[type="checkbox"]:checked {
+    accent-color: var(--darklastcolor);
+}
+
+.tarefa-feito label {
+    margin: 0;
+}
+
+.btn-fim{
+    border: none;
+    border-radius: var(--border);
+    background-color: var(--bluecolor);
+    color: var(--whitecolor);
+    width: 100px;
+    height: 30px;
+    margin: -1px auto;
+    box-shadow: var(--shadow);
+}
+
+.btn-hidden{
+    opacity: 0;
+}
+
+footer{
+    background-color: var(--darklastcolor);
+    color: var(--whitecolor);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    min-height: 100px;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contat-footer{
+    display: flex;
+    gap: 20px;
+}
+
+.contat-footer img:hover{
+    transform: translateY(-5px);
+    transition: all 0.6s;
+}
+
+.contat-footer a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+    color: var(--whitecolor);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contat-footer img{
+    width: 30px;
+}
+
+
+@media (max-width: 768px) {
+    .container-primary {
+        height: auto;
+        min-height: unset;
+        padding: 40px 0;
+    }
+
+    .container-secundary {
+        max-width: 95%;
+        flex-direction: column;
+        height: auto;
+        position: static;
+        margin-top: 20px;
+    }
+
+    .container-text,
+    .container-input {
+        width: 95%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .input-tarefa,
+    .btn-add {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .container-tarefa {
+        width: 90%;
+        min-width: unset;
+        padding: 0 10px;
+    }
+
+    .tarefa-feito {
+        margin-left: auto;
+    }
+}
