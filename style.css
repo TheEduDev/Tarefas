@@ -30,17 +30,10 @@ header {
     width: 100%;
     min-height: 50px;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--whitecolor);
     color: var(--darklastcolor);
     box-shadow: var(--shadow);
-}
-
-.header-menu h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    min-width: 280px;
-    max-width: 1200px;
-    margin: auto;
 }
 
 .header-menu a {
@@ -50,21 +43,26 @@ header {
 }
 
 nav {
+    display: flex;
     min-width: 280px;
     max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: center;
     margin: 0 auto;
     padding: 0 5px;
     gap: 30px;
 }
 
-section {
+.sec-hidden {
     display: grid;
     min-height: 25vh;
 }
@@ -227,7 +225,7 @@ main {
     align-items: center;
     gap: 10px;
     padding: 0 10px;
-    margin: auto;
+    margin: 20px auto;
     box-shadow: var(--shadow);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -335,8 +333,8 @@ footer{
 
     .input-tarefa,
     .btn-add {
-        width: 100%;
-        max-width: 100%;
+        width: 95%;
+        max-width: 95%;
     }
 
     .container-tarefa {
