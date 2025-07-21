@@ -8,6 +8,12 @@
     --border: 5px;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
   scroll-padding-top: 100px;
   scroll-behavior: smooth;
