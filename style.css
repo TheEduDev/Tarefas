@@ -294,6 +294,8 @@ footer{
 .contat-footer{
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .contat-footer img:hover{
@@ -328,11 +330,12 @@ footer{
         height: auto;
         position: static;
         margin-top: 20px;
+        padding: 0 10px;
     }
 
     .container-text,
     .container-input {
-        width: 95%;
+        width: 100%;
         margin: 10px 0;
         padding: 10px;
     }
