@@ -4,4 +4,4 @@ O projeto consiste em um site onde o cliente pode listar as tarefas do seu dia, 
 
 ![layout do site](./img/layout.png)
 
-Acesse [clicando aqui]()
+Acesse [clicando aqui](https://theedudev.github.io/Tarefas/)
